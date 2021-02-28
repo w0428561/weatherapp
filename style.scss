@@ -1,0 +1,192 @@
+$font_color: white;
+$main-font: "Nunito Sans", sans-serif;
+$white-color: white;
+$point-color:   #f54f2a;
+
+html {
+  font-family: $main-font;
+}
+
+body {
+  color: $font_color;
+  background-image: url("./images/defalt.jpg");
+  text-align: center;
+}
+hr {
+  border-top: 1px solid $white-color;
+}
+#wetherContainer {
+  width: 200vw;
+  height: 100%;
+  border: gray;
+
+  clear: both;
+  margin: 0 auto;
+  color: white;
+}
+#searchContainer {
+  margin-top: 0%;
+}
+#cityHeader {
+  margin-top: 20%;
+  font-size: 80px;
+  font-weight: 500;
+}
+
+#documentIconImg {
+  margin: 0;
+  display: inline;
+}
+#weatherDescriptionHeader {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 18px;
+}
+#temperature {
+  font-size: 70px;
+  font-weight: 200;
+}
+#maxMinTemp {
+  padding: 5%;
+}
+#windSpeed,
+#humidity {
+  font-size: 20px;
+}
+
+/* search class */
+.wrapper {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.searchbox {
+  position: relative;
+}
+
+.searchbox .input {
+  width: 0;
+  border: 0px;
+  height: 50px;
+  padding: 0px 23px;
+  border-radius: 40px;
+  outline: none;
+  color: $point-color;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.5s linear;
+}
+
+.searchbtn {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  background: $white-color;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s 0.6s linear;
+}
+
+.searchbtn .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $point-color;
+  font-size: 22px;
+  transition: all 0.5s 0.6s linear;
+}
+
+/* jquery */
+.searchbtn.bg-red {
+  background: $point-color;
+  transition: all 0.2s linear;
+}
+.searchbtn .fas.color-white {
+  color: $font_color;
+  transition: all 0.2s linear;
+}
+
+.searchbox .input.active-width {
+  width: 150px;
+}
+
+::placeholder {
+  opacity: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  body {
+    background-image: url("./images/defalt.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    margin: 0;
+  }
+
+  #weatherContainer {
+    width: 600px;
+    border: $white-color;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    clear: both;
+    margin: 0 auto;
+    color: $font_color;
+  }
+
+  #cityHeader {
+    font-size: 90px;
+    font-weight: 800;
+  }
+  #temperature {
+    font-size: 90px;
+    padding: 20px;
+  }
+  #maxMinTemp {
+    text-align: right;
+  }
+  #documentIconImg {
+    margin: 0;
+    display: inline;
+  }
+  hr {
+    border-top: 1px solid $white-color;
+  }
+  #weatherDescriptionHeader {
+    display: inline-block;
+    vertical-align: top;
+  }
+  #searchContainer {
+    padding: 0px;
+    border: $white-color;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+  #windSpeed,
+  #humidity {
+    text-align: right;
+  }
+  .searchbox .input {
+    height: 49px;
+    padding: 0 27px;
+    background-color: $white-color;
+  }
+  .searchbox .input.active-width {
+    width: 200px;
+    height: 60px;
+  }
+  .searchbtn {
+    width: 60px;
+    height: 60px;
+  }
+}
